@@ -41,6 +41,12 @@ class Settings(BaseSettings):
     # CORS settings
     allowed_origins: list[str] = ["http://localhost:3000", "http://localhost:8123"]
 
+    # Obsidian vault configuration
+    vault_path: str
+
+    # Anthropic API configuration
+    anthropic_api_key: str
+
 
 @lru_cache
 def get_settings() -> Settings:
